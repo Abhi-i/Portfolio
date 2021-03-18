@@ -1,0 +1,56 @@
+body{
+    background-image: url("world_map.jpg");
+    background-size: auto;
+}
+#container{
+    height: 480px;
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    font-family: fantasy;
+    color: yellow;
+}
+.cardc{
+    position: relative;
+    height: 155px;
+    width: 155px;
+    border-radius: 20px;
+}
+.card{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    margin: auto;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+    z-index: 0;
+}
+.front,.back{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    color:orangered;
+    font-family: monospace;
+    font-size:18px;
+    backface-visibility: hidden;
+    text-align: center;
+    border-radius: 20px;
+}
+.front{
+    background-color: lightgreen;
+    z-index: 1;
+}
+.back {
+    background-color: lightblue;
+    transform: rotateY(180deg);
+    z-index: -1;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
